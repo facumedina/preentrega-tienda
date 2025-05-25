@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header {
+    background-color: #b45400;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Ancizar Serif', serif;
+}
+
+header img {
+    max-height: 100px;
+    height: auto;
+    width: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.3rem;
+}
+
+.dropdown-menu {
+    background-color: #b45400;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #8e3e00;
+}
+
+
+@media (max-width: 575.98px) {
+    .with-border {
+        border: none;
+    }
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  flex: 1;
+}
+
+.footer-container {
+    background-color: #b45400;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-container .item {
+    padding: 10px;
+    align-self: center;
+    width: 30%;
+    min-width: 250px;
+}
+
+
+.footer-container i {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .nav-link {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.3rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-container .item,
+    .footer-container .redes-sociales,
+    .footer-container .contact-footer {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer-container i {
+        margin: 5px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+
+    header {
+        font-size: 1.2rem;
+    }
+
+
+}
