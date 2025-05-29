@@ -109,6 +109,14 @@ h3 {
   font-family: 'Poppins', sans-serif;
 }
 
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #070707;
+}
+
 .formulario input:focus {
   outline: 0;
   border: 1px solid #97d848;

@@ -6,6 +6,30 @@
     margin: 0;
 }
 
+body {
+    background-image: url('/media/img/quienessomos.png'); /* ajustá la ruta si es necesario */
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    position: relative;
+    z-index: 0;
+    font-weight: bold;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+
+
 .contenedor-flex {
     display: flex;
     align-items: center;
@@ -50,87 +74,16 @@ nav ul {
     background-color: #8e3e00;
 }
 
+.resaltado {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px;
+}
+
 
 @media (max-width: 575.98px) {
     .with-border {
         border: none;
     }
-}
-
-
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-
-main {
-    flex: 1;
-}
-
-
-.contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-}
-
-.productos-almohadones {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.producto {
-    background-color: #da9225;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 0 10px white;
-    transition: transform 0.3s ease;
-}
-
-.producto-nombre {
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-.producto-precio {
-    font-size: 1.2rem;
-    color: white;
-    font-weight: bold;
-}
-
-
-.producto img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.btn {
-    background: white;
-    border: 2px solid transparent;
-    color: rgb(9, 9, 9);
-    line-height: normal;
-    transition: all 0.3s;
-    padding: 12px 28px;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background: transparent;
-    border-color: white;
-    color: white;
 }
 
 
@@ -192,12 +145,9 @@ main {
 
 @media (max-width: 576px) {
 
+
     header {
         font-size: 1.2rem;
-    }
-
-    .producto {
-        width: 90%;
     }
 
 
