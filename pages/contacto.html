@@ -54,35 +54,39 @@
                         <div class="formulario">
                             <h1>Contacto</h1>
                             <h5 class="mb-4">Escríbenos y en breve te contactaremos!</h5>
-                            <form>
+                            <form id="form-contacto">
                                 <div>
-                                    <label for="nombre" class="colocar_nombre">Nombre <span
-                                            class="obligatorio">*</span></label>
-                                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                                        placeholder="Escribe tu nombre">
-                                </div><br>
-                                <div>
-                                    <label for="email" class="colocar_email">Email <span
-                                            class="obligatorio">*</span></label>
-                                    <input type="email" name="introducir_email" id="email" required="obligatorio"
-                                        placeholder="Escribe tu Email">
-                                </div><br>
-                                    <label for="assunto" class="colocar_asunto">Asunto <span
-                                            class="obligatorio">*</span></label>
-                                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
-                                        placeholder="Escribe un asunto">
-                                </div><br>
-                                <div>
-                                    <label for="mensaje" class="colocar_mensaje">Mensaje <span
-                                            class="obligatorio">*</span></label>
-                                    <textarea name="introducir_mensaje" class="texto_mensaje p-3" id="mensaje"
-                                        required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                                </div><br>
-                                <button class="button" type="submit" name="enviar_formulario"
-                                    id="enviar">Enviar</button>
-                                <div class="aviso"><span class="obligatorio"> * </span>Los campos son obligatorios.
+                                    <label for="nombre">Nombre *</label>
+                                    <input type="text" id="nombre">
+                                    <div id="empty-name-error" class="text-danger"></div>
+                                    <div id="short-name-error" class="text-danger"></div>
                                 </div>
+
+                                <div>
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email">
+                                    <div id="empty-email-error" class="text-danger"></div>
+                                    <div id="invalid-email-error" class="text-danger"></div>
+                                </div>
+
+                                <div>
+                                    <label for="asunto">Asunto *</label>
+                                    <input type="text" id="asunto">
+                                    <div id="empty-subject-error" class="text-danger"></div>
+                                    <div id="short-subject-error" class="text-danger"></div>
+                                </div>
+
+                                <div>
+                                    <label for="mensaje">Mensaje *</label>
+                                    <textarea id="mensaje"></textarea>
+                                    <div id="empty-mensaje-error" class="text-danger"></div>
+                                </div>
+
+                                <button type="submit" id="btnEnviar">Enviar</button>
                             </form>
+                            
+                            
+                            <div id="alerta" class="alerta-centrada" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -126,7 +130,7 @@
         </div>
     </footer>
 
-
+    <SCript src="/js/form.js"></SCript>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
